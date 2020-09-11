@@ -1,0 +1,264 @@
+/* Global */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.clearfix {
+    clear: both
+}
+
+.container {
+    width: 50%;
+    margin: 1% auto;
+    padding: 1%
+}
+
+body {
+    background-image: -webkit-linear-gradient(20deg, rgba(37, 38, 39, 0.9) 50%, rgba(27, 28, 29, 0.9) 50%);
+    background-image: linear-gradient(70deg, rgba(37, 38, 39, 0.9) 50%, rgba(27, 28, 29, 0.9) 50%);
+    background-repeat: no-repeat;
+}
+
+/* Login & Signup */
+
+.login,
+.signup {
+    top: 25%;
+    width: 30%;
+    margin: 0 auto;
+    border: 1px solid #4F6DA7;
+    padding: 2%;
+    z-index: 99;
+}
+
+.login form *,
+.signup form * {
+    display: block;
+    width: 100%;
+    padding: 4%;
+    margin: 1%;
+    border: 1px solid #4F6DA7;
+}
+
+.login form > div,
+.signup form > div {
+    border: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+.login form input[type=submit],
+.login form > div > button,
+.signup form input[type=submit],
+.signup form > div > button {
+    background: #4F6DA7;
+    color: #fafafa;
+    border: none;
+    border-radius: 2px;
+    width: 26%;
+    margin: 4% auto;
+    margin-bottom: 0;
+    font-weight: bold;
+    display: inline
+}
+
+/* Header */
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 2%;
+    padding: 3%;
+    background: #4F6DA7
+}
+
+header h1 {
+    width: 70%;
+    color: #fafafa;
+}
+
+header button {
+    width: 14%;
+    margin: 0 .5%;
+    border: none;
+    background: #1b1c1d;
+    color: #fafafa;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+/* Tasks */
+
+.tasks {
+    overflow: hidden;
+}
+
+.tasks form {
+    margin-bottom: 2%;
+    padding: 3%;
+    background: #fff;
+}
+
+.tasks form input[type=text] {
+    width: 80%;
+    padding: 1%;
+    margin-bottom: 1%;
+    border: 1px solid #4F6DA7
+}
+
+.tasks form input[type=submit],
+.tasks form button {
+    width: 8%;
+    margin-left: 1%;
+    padding: 2%;
+    float: right;
+    border: none;
+    background: #4F6DA7;
+    color: #fafafa;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.tasks form textarea {
+    width: 80%;
+    padding: 1%;
+    margin-bottom: 1%;
+    border: 1px solid #4F6DA7;
+    display: block
+}
+
+.task-data {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 2%;
+    padding: 3%;
+    background: #fff;
+}
+
+.task-data h1 {
+    width: 100%;
+    padding-top: 1%;
+    color: rgba(27, 28, 29, 0.9)
+}
+
+.task-data p {
+    width: 50%;
+    padding-top: 1%;
+    color: #4F6DA7
+}
+
+.task-data p span {
+    color: #c33
+}
+
+#task-control {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#task-control button {
+    margin-left: 5%;
+    background: none;
+    border: none;
+    color: #c33;
+    font-size: 2em;
+}
+
+/* Footer */
+
+footer form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+footer form * {
+    padding: 1%;
+    margin: auto
+}
+
+footer form input {
+    background: none;
+    border: none;
+    color: #5d6b6c;
+}
+
+footer .active {
+    color: #c33
+}
+
+/* The switch - the box around the slider */
+
+/* Source: w3schools.com/howto/howto_css_switch.asp */
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+
+.switch input {
+    display: none;
+}
+
+/* The Slider */
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c33;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #393;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #393;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
